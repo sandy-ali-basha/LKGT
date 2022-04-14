@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10.985" height="24" viewBox="0 0 10.985 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="ico_facebook" class="cls-1" d="M772.32,6154.748h2.338V6151h-2.866v.017c-4.484.155-5.406,2.632-5.485,5.233H766.3v3.008h-2.291v3.748H766.3V6175h4.579v-11.994h3.435l.679-3.748h-4.115v-2.716A1.685,1.685,0,0,1,772.32,6154.748Z" transform="translate(-764.008 -6151)"/>
+</svg>

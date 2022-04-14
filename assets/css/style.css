@@ -1,0 +1,581 @@
+/**
+*
+* Testing
+*
+**/
+@font-face {
+  font-family: "TwCen-bold";
+  src: url("../fonts/TwCenClassMTStd-Bold.eot");
+  src: url("../fonts/TwCenClassMTStd-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/") format("woff2"), url("../fonts/TwCenClassMTStd-Bold.woff") format("woff"), url("../fonts/TwCenClassMTStd-Bold.svg#TwCenClassMTStd-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TwCen-normal";
+  src: url("../fonts/TwCenClassMTStd-Regular.eot");
+  src: url("../fonts/TwCenClassMTStd-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/") format("woff2"), url("../fonts/TwCenClassMTStd-Regular.woff") format("woff"), url("../fonts/TwCenClassMTStd-Regular.svg#TwCenClassMTStd-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Britannic";
+  src: url("fonts/BritannicBold.eot");
+  src: url("fonts/BritannicBold.eot?#iefix") format("embedded-opentype"), url("fonts/BritannicBold.woff2") format("woff2"), url("fonts/BritannicBold.woff") format("woff"), url("fonts/BritannicBold.ttf") format("truetype"), url("fonts/BritannicBold.svg#BritannicBold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Araboto";
+  src: url("fonts/Araboto-Normal.eot");
+  src: url("fonts/Araboto-Normal.eot?#iefix") format("embedded-opentype"), url("fonts/Araboto-Normal.woff2") format("woff2"), url("fonts/Araboto-Normal.woff") format("woff"), url("fonts/Araboto-Normal.ttf") format("truetype"), url("fonts/Araboto-Normal.svg#Araboto-Normal") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #2A363C;
+  /* or add it to the track */
+}
+
+/* Add a thumb */
+::-webkit-scrollbar-thumb {
+  background: #8D1620;
+}
+
+.about {
+  padding-top: 20vh;
+  padding-left: 5vw;
+  position: relative;
+}
+
+.about .header {
+  font-family: "Araboto" !important;
+  font-weight: 900 !important;
+  margin-left: 3vw;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  width: 55vw;
+  font-weight: bold;
+  font-size: 7rem;
+  line-height: 6.5rem;
+  letter-spacing: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.about .about-circle {
+  overflow: auto;
+  position: absolute;
+  z-index: -1;
+  width: 40vw;
+  right: -20vw;
+  bottom: 24vh;
+}
+
+.about .disc {
+  font-family: "TwCen" !important;
+  width: 55vw;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 400;
+  margin: 2rem;
+  font-size: 1.2rem;
+  padding-block: 1rem;
+}
+
+.about .disc .explor-btn {
+  margin-right: 2rem;
+}
+
+.about .disc p {
+  font-family: araboto !important;
+  font-weight: 400;
+}
+
+.about .disc div {
+  padding: 0rem 1.2rem;
+}
+
+.about .disc div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-right: 1px solid #C5D5DD;
+  text-align: right;
+}
+
+.about .logo1,
+.about .logo2 {
+  position: absolute;
+  opacity: 60%;
+  mix-blend-mode: color-dodge;
+  z-index: -1;
+  width: 50vw;
+}
+
+.about .logo1 {
+  right: 0px;
+  top: -15vh;
+}
+
+.about .logo2 {
+  top: 75vh;
+  left: -35vw;
+}
+
+.about .red-quote {
+  position: relative;
+  margin-left: -5vw !important;
+  width: 100vw;
+  background-color: #8D1620;
+  padding: 5vh 20vw;
+  margin-top: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.about .red-quote img {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+  width: 10vw;
+  margin: 5vh;
+}
+
+.about .red-quote p {
+  font-family: TwCen-normal !important;
+  color: white;
+}
+
+.about .red-quote button {
+  border-color: white;
+  margin: 2rem;
+}
+
+.about .red-quote button:hover span {
+  color: #2A363C;
+}
+
+.about .red-quote button span {
+  color: white;
+}
+
+.about .red-quote .red-quote-circle {
+  position: absolute;
+  left: -35vw;
+  top: 19vh;
+  width: 46vw;
+}
+
+.our-mission {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 18vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.our-mission .lkgt {
+  color: #8D1620;
+  left: 15vw;
+  position: absolute;
+  font-size: 14rem;
+  top: 22vh;
+}
+
+.our-mission .mission h1 {
+  position: absolute;
+  top: 50vh;
+  right: 12vw;
+}
+
+.our-mission .mission div {
+  position: absolute;
+  top: 38vh;
+  font-size: 2rem;
+}
+
+.our-mission h1 {
+  font-size: 12rem;
+}
+
+.our-mission .image {
+  width: 50vw;
+}
+
+.our-mission article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.our-mission article .with-btn {
+  text-align: right;
+}
+
+.our-mission article div {
+  width: 40vw;
+  padding: 6rem 4rem;
+}
+
+.our-mission article div p {
+  font-size: 2rem;
+  font-family: "TwCen-normal" !important;
+}
+
+.sectors {
+  padding-top: 20vh;
+  padding-left: 5vw;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: Britannic !important;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #C5D5DD;
+  accent-color: #8D1620;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #2A363C !important;
+}
+
+.Section-Title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: "TwCen";
+}
+
+.Section-Title .dot {
+  background-color: #C5D5DD;
+  width: 10px;
+  height: 10px;
+  margin: 1rem;
+  -webkit-margin-end: 20px;
+          margin-inline-end: 20px;
+}
+
+.Section-Title h5 {
+  font-size: 2rem;
+}
+
+header {
+  height: 100vh;
+  background: url(../images/hero-bg.jpg) center/cover;
+}
+
+header nav {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-inline: 2rem;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #C5D5DD;
+}
+
+header nav a:hover, header nav a:focus {
+  color: #C5D5DD;
+}
+
+header nav .contact-btn {
+  background-color: #C5D5DD;
+  padding: 15px;
+  border-bottom-right-radius: 25px;
+  color: #2A363C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .contact-btn:hover {
+  color: #2A363C;
+}
+
+header nav .main-btns {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+header nav .main-btns a {
+  position: relative;
+  padding-inline: 1.6rem;
+}
+
+header nav .main-btns .menu-btn-active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 0px;
+  left: 0px;
+  background-color: #C5D5DD;
+}
+
+header nav .main-btns .menu {
+  width: 6vw;
+}
+
+header nav .main-btns .menu img {
+  width: 100%;
+}
+
+header .hero {
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 80vh;
+}
+
+header .hero .global {
+  position: absolute;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #c5d5dd;
+  color: transparent;
+  left: 30vw;
+  font-size: 5rem;
+  top: 16vh;
+}
+
+header .hero .alkhwam {
+  color: #8D1620;
+  font-size: 12rem;
+}
+
+header .hero .tech {
+  font-size: 3rem;
+  position: absolute;
+  top: 10rem;
+  left: 46rem;
+}
+
+header .hero .twinty {
+  font-weight: 800;
+  opacity: 20%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  left: -10rem;
+  top: 13rem;
+  position: absolute;
+  font-size: 18vw;
+}
+
+header .hero .lkgt-circle {
+  position: absolute;
+  right: 3rem;
+  top: 7vh;
+  opacity: 80%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-animation: rotate 15s infinite linear;
+          animation: rotate 15s infinite linear;
+}
+
+header .hero .lkgt-circle img {
+  width: 9vw;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+header .hero .go-to-profile {
+  position: absolute;
+  right: 2rem;
+  bottom: -3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .hero .go-to-profile .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15vw;
+  height: 15vh;
+  background: url(../images/img.png) center/cover;
+}
+
+header .hero .go-to-profile .img img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: drop-shadow(0px 0px 4px black);
+          filter: drop-shadow(0px 0px 4px black);
+}
+
+header .hero .go-to-profile .text {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 0.7rem;
+}
+
+.marqee-div {
+  background-color: #c5d5ddb9;
+}
+
+.marqee-div .news-tv {
+  color: #2A363C;
+  width: 100vw;
+  padding-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.explor-btn {
+  background-color: transparent;
+  color: #C5D5DD;
+  font-size: 1.1rem;
+  border: 2px solid #C5D5DD;
+  padding: 0.6rem 1.2rem;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  outline: none;
+  letter-spacing: 1px;
+}
+
+.explor-btn span {
+  position: relative;
+  z-index: 5;
+  text-transform: uppercase;
+  font-family: TwCen-normal !important;
+}
+
+.explor-btn:hover span {
+  color: #2A363C;
+  letter-spacing: 3px;
+}
+
+.explor-btn:hover::before {
+  -webkit-transform: scale(20);
+          transform: scale(20);
+  background-color: #C5D5DD;
+}
+
+.explor-btn::before {
+  content: "";
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,110 @@
+.about {
+  padding-top: 20vh;
+  padding-left: 5vw;
+  position: relative;
+  $about-width: 55vw;
+  .header {
+    font-family: "Araboto" !important;
+    font-weight: 900 !important;
+    margin-left: 3vw;
+    flex-wrap: wrap-reverse;
+    width: $about-width;
+    font-weight: bold;
+    font-size: 7rem;
+    line-height: 6.5rem;
+    letter-spacing: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .about-circle {
+    overflow: auto;
+    position: absolute;
+    z-index: -1;
+    width: 40vw;
+    right: -20vw;
+    bottom: 24vh;
+  }
+  .disc {
+    font-family: "TwCen" !important;
+    width: $about-width;
+    display: inline-flex;
+    font-weight: 400;
+    margin: 2rem;
+    font-size: 1.2rem;
+    padding-block: 1rem;
+    .explor-btn {
+      margin-right: 2rem;
+    }
+    p {
+      font-family: araboto !important;
+      font-weight: 400;
+    }
+    div {
+      padding: 0rem 1.2rem;
+      &:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        border-right: 1px solid $soft-white;
+        text-align: right;
+      }
+    }
+  }
+  .logo1,
+  .logo2 {
+    position: absolute;
+    opacity: 60%;
+    mix-blend-mode: color-dodge;
+    z-index: -1;
+    width: 50vw;
+  }
+  .logo1 {
+    right: 0px;
+    top: -15vh;
+  }
+  .logo2 {
+    top: 75vh;
+    left: -35vw;
+  }
+  .red-quote {
+    position: relative;
+    margin-left: -5vw !important;
+    width: 100vw;
+    background-color: $dark-red;
+    padding: 5vh 20vw;
+    margin-top: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    text-align: center;
+    img {
+      filter: brightness(0.8);
+      width: 10vw;
+      margin: 5vh;
+    }
+    p {
+      font-family: TwCen-normal !important;
+      color: white;
+    }
+    button {
+      border-color: white;
+      margin: 2rem;
+      &:hover {
+        span {
+          color: $greay;
+        }
+      }
+      span {
+        color: white;
+      }
+    }
+    .red-quote-circle {
+      position: absolute;
+      left: -35vw;
+      top: 19vh;
+      width: 46vw;
+    }
+  }
+}

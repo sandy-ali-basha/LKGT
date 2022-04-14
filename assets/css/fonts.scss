@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "TwCen-bold";
+  src: url("../fonts/TwCenClassMTStd-Bold.eot");
+  src: url("../fonts/TwCenClassMTStd-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/") format("woff2"),
+    url("../fonts/TwCenClassMTStd-Bold.woff") format("woff"),
+    url("../fonts/TwCenClassMTStd-Bold.svg#TwCenClassMTStd-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TwCen-normal";
+  src: url("../fonts/TwCenClassMTStd-Regular.eot");
+  src: url("../fonts/TwCenClassMTStd-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/") format("woff2"),
+    url("../fonts/TwCenClassMTStd-Regular.woff") format("woff"),
+    url("../fonts/TwCenClassMTStd-Regular.svg#TwCenClassMTStd-Regular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Britannic";
+  src: url("fonts/BritannicBold.eot");
+  src: url("fonts/BritannicBold.eot?#iefix") format("embedded-opentype"),
+    url("fonts/BritannicBold.woff2") format("woff2"),
+    url("fonts/BritannicBold.woff") format("woff"),
+    url("fonts/BritannicBold.ttf") format("truetype"),
+    url("fonts/BritannicBold.svg#BritannicBold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Araboto";
+  src: url("fonts/Araboto-Normal.eot");
+  src: url("fonts/Araboto-Normal.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Araboto-Normal.woff2") format("woff2"),
+    url("fonts/Araboto-Normal.woff") format("woff"),
+    url("fonts/Araboto-Normal.ttf") format("truetype"),
+    url("fonts/Araboto-Normal.svg#Araboto-Normal") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

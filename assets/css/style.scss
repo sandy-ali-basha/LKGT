@@ -1,0 +1,219 @@
+@import "./variables";
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: Britannic !important;
+  transition: all 0.2s;
+  color: $soft-white;
+  accent-color: $dark-red;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  background-color: $greay !important ;
+}
+.Section-Title {
+  display: inline-flex;
+  .dot {
+    background-color: $soft-white;
+    width: 10px;
+    height: 10px;
+    margin: 1rem;
+    margin-inline-end: 20px;
+  }
+  h5 {
+    font-size: 2rem;
+  }
+  font-family: "TwCen";
+}
+header {
+  height: 100vh;
+  background: url(../images/hero-bg.jpg) center/cover;
+  nav {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 2rem;
+    a {
+      text-decoration: none;
+      color: $soft-white;
+      &:hover,
+      &:focus {
+        color: $soft-white;
+      }
+    }
+    .contact-btn {
+      background-color: $soft-white;
+      padding: 15px;
+      border-bottom-right-radius: 25px;
+      color: $greay;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        color: $greay;
+      }
+    }
+    .main-btns {
+      display: inline-flex;
+      a {
+        position: relative;
+        padding-inline: 1.6rem;
+      }
+      .menu-btn-active {
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          top: 0px;
+          left: 0px;
+          background-color: $soft-white;
+        }
+      }
+      .menu {
+        width: 6vw;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .hero {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 80vh;
+    .global {
+      position: absolute;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #c5d5dd;
+      color: transparent;
+      left: 30vw;
+      font-size: 5rem;
+      top: 16vh;
+    }
+    .alkhwam {
+      color: $dark-red;
+      font-size: 12rem;
+    }
+    .tech {
+      font-size: 3rem;
+      position: absolute;
+      top: 10rem;
+      left: 46rem;
+    }
+    .twinty {
+      font-weight: 800;
+      opacity: 20%;
+      transform: rotate(90deg);
+      left: -10rem;
+      top: 13rem;
+      position: absolute;
+      font-size: 18vw;
+    }
+    .lkgt-circle {
+      position: absolute;
+      right: 3rem;
+      top: 7vh;
+      opacity: 80%;
+      img {
+        width: 9vw;
+      }
+      transform: rotate(90deg);
+      animation: rotate 15s infinite linear;
+    }
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    .go-to-profile {
+      position: absolute;
+      right: 2rem;
+      bottom: -3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15vw;
+        height: 15vh;
+        background: url(../images/img.png) center/cover;
+        img {
+          &:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0px 0px 4px black);
+          }
+        }
+      }
+      .text {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+.marqee-div {
+  background-color: #c5d5ddb9;
+  .news-tv {
+    color: $greay;
+    width: 100vw;
+    padding-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+.explor-btn {
+  background-color: transparent;
+  color: $soft-white;
+  font-size: 1.1rem;
+  border: 2px solid $soft-white;
+  padding: 0.6rem 1.2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+  outline: none;
+  letter-spacing: 1px;
+
+  span {
+    position: relative;
+    z-index: 5;
+    text-transform: uppercase;
+    font-family: TwCen-normal !important;
+  }
+  &:hover {
+    span {
+      color: $greay;
+      letter-spacing: 3px;
+    }
+    &::before {
+      transform: scale(20);
+      background-color: $soft-white;
+    }
+  }
+  &::before {
+    content: "";
+    transition: all 0.4s;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+  }
+}

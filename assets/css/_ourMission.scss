@@ -1,0 +1,50 @@
+.our-mission {
+  display: flex;
+  padding: 18vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  .lkgt {
+    color: $dark-red;
+    left: 15vw;
+    position: absolute;
+    font-size: 14rem;
+    top: 22vh;
+  }
+  .mission {
+    h1 {
+      position: absolute;
+      top: 50vh;
+      right: 12vw;
+    }
+    div {
+      position: absolute;
+      top: 38vh;
+      font-size: 2rem;
+    }
+  }
+
+  h1 {
+    font-size: 12rem;
+  }
+  .image {
+    width: 50vw;
+  }
+  article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .with-btn {
+      text-align: right;
+    }
+    div {
+      width: 40vw;
+      padding: 6rem 4rem;
+      p {
+        font-size: 2rem;
+        font-family: "TwCen-normal" !important  ;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+footer {
+  position: relative;
+  height: 80vh;
+  background: $greay url(/assets/images/footer.png) center/cover;
+  display: flex;
+  flex-direction: column;
+  * {
+    color: $dark-red !important;
+  }
+  .Section-Title {
+    margin-top: 30vh;
+    margin-left: 7vw;
+    h5 {
+      color: $greay !important;
+    }
+    .dot {
+      background-color: $greay !important;
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .numbers {
+    width: 20vw;
+    margin-right: 2vw;
+  }
+  .social {
+    margin-left: 5vw;
+  }
+}

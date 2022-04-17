@@ -1,4 +1,132 @@
 .sectors {
-  padding-top: 20vh;
-  padding-left: 5vw;
+  position: relative;
+  height: 100vh;
+  .Section-Title {
+    margin-left: 5vw;
+  }
+  .sectors-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .explor-btn {
+      background-color: $greay;
+      border: none;
+      color: #edf4fc;
+      padding: 0.9rem 2.2rem;
+      span {
+        color: #edf4fc;
+      }
+      font-size: 0.8rem;
+      &:hover {
+        span {
+          color: $dark-red;
+        }
+      }
+    }
+    .red-block,
+    .dark-block {
+      padding: 5vh;
+      padding-top: 5vh;
+      width: 50vw;
+      height: 100vh;
+    }
+    .red-block {
+      background-color: $dark-red !important;
+      .text {
+        z-index: 10;
+        left: 41%;
+        position: relative;
+        top: 22%;
+        h1 {
+          color: #edf4fc;
+          font-size: 5rem;
+        }
+        p {
+          color: #edf4fc;
+          font-family: "Araboto" !important;
+          font-weight: 300;
+        }
+        p,
+        .explor-btn {
+          position: relative;
+          left: -5%;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+    .dark-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .btns {
+        display: flex;
+        justify-content: space-between; /* padding-top: 7vh; */
+        position: relative;
+        top: 7vh;
+        align-items: center;
+        width: 22vw;
+        background: rebeccapurple;
+        /* padding-top: 5vh; */
+        margin-right: 10vw;
+        height: 0px;
+        button {
+          width: 5vw;
+          height: 5vw;
+          border-radius: 50%;
+          border: none;
+          letter-spacing: 2px;
+          outline: none;
+          font-family: TwCen-normal !important;
+          font-size: 0.7rem;
+          background: #ff000000;
+          border: 1px solid transparent;
+          &:hover {
+            transition: all 0.6s;
+            border: 1px solid $soft-white;
+          }
+        }
+        .line {
+          background: $soft-white;
+          height: 1px;
+          width: 50%;
+        }
+      }
+
+      img {
+        width: 45vw;
+        position: relative;
+        right: 12vw;
+      }
+      h1 {
+        z-index: -1;
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(90deg);
+        font-size: 16rem;
+        position: absolute;
+        right: -15vh;
+        opacity: 20%;
+        top: 29vh;
+        color: $soft-white;
+      }
+      // display: flex;
+    }
+    .right-red-line {
+      position: absolute;
+      right: 0px;
+      top: 15%;
+      height: 70%;
+      width: 0.5vw;
+      background-color: $dark-red;
+    }
+    .circle {
+      position: absolute;
+      width: 40vw;
+      left: -18rem;
+      bottom: -37%;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }

@@ -264,13 +264,232 @@
 }
 
 .our-mission article div p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "TwCen-normal" !important;
 }
 
 .sectors {
-  padding-top: 20vh;
-  padding-left: 5vw;
+  position: relative;
+  height: 100vh;
+}
+
+.sectors .Section-Title {
+  margin-left: 5vw;
+}
+
+.sectors .sectors-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sectors .sectors-content .explor-btn {
+  background-color: #2A363C;
+  border: none;
+  color: #edf4fc;
+  padding: 0.9rem 2.2rem;
+  font-size: 0.8rem;
+}
+
+.sectors .sectors-content .explor-btn span {
+  color: #edf4fc;
+}
+
+.sectors .sectors-content .explor-btn:hover span {
+  color: #8D1620;
+}
+
+.sectors .sectors-content .red-block,
+.sectors .sectors-content .dark-block {
+  padding: 5vh;
+  padding-top: 5vh;
+  width: 50vw;
+  height: 100vh;
+}
+
+.sectors .sectors-content .red-block {
+  background-color: #8D1620 !important;
+}
+
+.sectors .sectors-content .red-block .text {
+  z-index: 10;
+  left: 41%;
+  position: relative;
+  top: 22%;
+}
+
+.sectors .sectors-content .red-block .text h1 {
+  color: #edf4fc;
+  font-size: 5rem;
+}
+
+.sectors .sectors-content .red-block .text p {
+  color: #edf4fc;
+  font-family: "Araboto" !important;
+  font-weight: 300;
+}
+
+.sectors .sectors-content .red-block .text p,
+.sectors .sectors-content .red-block .text .explor-btn {
+  position: relative;
+  left: -5%;
+  margin-top: 0.5rem;
+}
+
+.sectors .sectors-content .dark-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sectors .sectors-content .dark-block .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* padding-top: 7vh; */
+  position: relative;
+  top: 7vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 22vw;
+  background: rebeccapurple;
+  /* padding-top: 5vh; */
+  margin-right: 10vw;
+  height: 0px;
+}
+
+.sectors .sectors-content .dark-block .btns button {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  border: none;
+  letter-spacing: 2px;
+  outline: none;
+  font-family: TwCen-normal !important;
+  font-size: 0.7rem;
+  background: #ff000000;
+  border: 1px solid transparent;
+}
+
+.sectors .sectors-content .dark-block .btns button:hover {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  border: 1px solid #C5D5DD;
+}
+
+.sectors .sectors-content .dark-block .btns .line {
+  background: #C5D5DD;
+  height: 1px;
+  width: 50%;
+}
+
+.sectors .sectors-content .dark-block img {
+  width: 45vw;
+  position: relative;
+  right: 12vw;
+}
+
+.sectors .sectors-content .dark-block h1 {
+  z-index: -1;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(90deg);
+  font-size: 16rem;
+  position: absolute;
+  right: -15vh;
+  opacity: 20%;
+  top: 29vh;
+  color: #C5D5DD;
+}
+
+.sectors .sectors-content .right-red-line {
+  position: absolute;
+  right: 0px;
+  top: 15%;
+  height: 70%;
+  width: 0.5vw;
+  background-color: #8D1620;
+}
+
+.sectors .sectors-content .circle {
+  position: absolute;
+  width: 40vw;
+  left: -18rem;
+  bottom: -37%;
+}
+
+.sectors .sectors-content .circle img {
+  width: 100%;
+}
+
+footer {
+  position: relative;
+  height: 80vh;
+  background: #2A363C url(/assets/images/footer.png) center/cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer * {
+  color: #8D1620 !important;
+}
+
+footer .Section-Title {
+  margin-top: 30vh;
+  margin-left: 7vw;
+}
+
+footer .Section-Title h5 {
+  color: #2A363C !important;
+}
+
+footer .Section-Title .dot {
+  background-color: #2A363C !important;
+}
+
+footer .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .numbers {
+  width: 20vw;
+  margin-right: 2vw;
+}
+
+footer .social {
+  margin-left: 5vw;
 }
 
 * {

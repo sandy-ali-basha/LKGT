@@ -7,12 +7,12 @@
     <!-- style css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- animate css -->
-    <link rel="stylesheet" href="./assets/css/animate.min.css" />
-    <!-- bootstrap stuf -->
+    <!-- bootstrap -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css.map" />
     <link rel="stylesheet" href="./assets/css/bootstrap.rtl.min.css" />
     <link rel="stylesheet" href="./assets/css/bootstrap.rtl.min.css.map" />
+    <link rel="stylesheet" href="./assets/css/animate.min.css" />
     <link
       rel="shortcut icon"
       href="./assets/images/logo.svg"
@@ -24,46 +24,75 @@
     <title>LKGT</title>
   </head>
 
-  <body>
-    <!-- icons -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="profile" viewBox="0 0 16 16">
-        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-        <path
-          fill-rule="evenodd"
-          d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
-        />
-      </symbol>
-    </svg>
-    <!-- icons end -->
+  <body class="smooth-wrapper">
     <!-- Hero section 😎 -->
-    <header>
+    <header id="home">
       <nav>
         <a class="contact-btn" href="#contact">contact</a>
         <div class="main-btns">
-          <a class="" href="#home"><div class="menu-btn-active">menu</div></a>
+          <a class="" href="#home"><div class="menu-btn-active">HOME</div></a>
           <a href="#sectors"><div>sectors</div></a>
           <a href="#about"><div>about</div></a>
-          <a class="menu" href="#menu"
-            ><img src="./assets/images/main-menu.svg" alt=""
-          /></a>
         </div>
+        <a class="menu" href="#menu">
+          <img src="./assets/images/main-menu.svg" />
+        </a>
       </nav>
-      <section class="hero">
-        <h2 class="global">global</h2>
-        <h3 class="tech">tech</h3>
-        <h1 class="alkhwam">alkhwam</h1>
-        <h1 class="twinty">2022</h1>
-        <div class="lkgt-circle">
-          <img src="./assets/images/lkgt-circle.svg" alt="" />
+      <aside>
+        <div class="left">
+          <img src="./assets/images/logo.svg" alt="" />
+          <h2>LKGT</h2>
+          <button><img src="./assets/images/x-icon.svg" alt="" /></button>
         </div>
-        <div class="go-to-profile">
-          <div class="img">
-            <a href="www.google.com">
-              <img src="./assets/images/btn_play.svg" alt=""
-            /></a>
+        <div class="right">
+          <h1>Main Category</h1>
+          <div>
+            <ol>
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#home">Sectors</a>
+              </li>
+              <li>
+                <a href="#home">Contact Us</a>
+              </li>
+            </ol>
+            <div class="sotial">
+              <button class="facebook">F</button>
+              <button class="Instgram">I</button>
+              <div>-- follow us</div>
+            </div>
           </div>
-          <div class="text">Company Profile</div>
+        </div>
+      </aside>
+      <section>
+        <div class="hero">
+          <h2 class="global animate__fadeIn animate__animated animate__faster">
+            global
+          </h2>
+          <h3
+            data-depth="0.40"
+            class="tech animate__fadeInUp animate__animated animate__faster"
+          >
+            tech
+          </h3>
+          <h1 data-depth="0.60" class="alkhwam">alkhwam</h1>
+          <h1 class="twinty">2022</h1>
+          <div class="lkgt-circle rotating">
+            <img src="./assets/images/lkgt-circle.svg" alt="" />
+          </div>
+          <div class="go-to-profile">
+            <div class="img">
+              <a href="www.google.com">
+                <img src="./assets/images/btn_play.svg" alt=""
+              /></a>
+            </div>
+            <div class="text">Company Profile</div>
+          </div>
         </div>
       </section>
     </header>
@@ -80,13 +109,18 @@
     <main>
       <!-- about section 🤞-->
       <section class="about" id="about">
-        <img src="./assets/images/logo.svg" alt="" class="logo1" />
-        <img src="./assets/images/logo.svg" alt="" class="logo2" />
+        <img src="./assets/images/logo.svg" alt="" class="logo1 pImage" />
+        <img src="./assets/images/logo.svg" alt="" class="logo2 pImage" />
         <div class="Section-Title">
           <h5 class="dot"></h5>
           <h5>OUR STORY</h5>
         </div>
-        <div class="header">startes since 1966 as a familly busness</div>
+        <div class="header">
+          <span>startes </span>
+          <span>since 1966</span>
+          <span> as a familly</span>
+          <span>busness</span>
+        </div>
         <article class="disc">
           <div>
             <p>
@@ -105,12 +139,16 @@
               reprehenderit veritatis, repellendus voluptates.
             </p>
           </div>
-          <img class="about-circle" src="./assets/images/circle1.svg" alt="" />
+          <img
+            class="about-circle rotating"
+            src="./assets/images/circle1.svg"
+            alt=""
+          />
         </article>
 
         <!-- the red block article  🟥-->
-        <article class="red-quote">
-          <img src="./assets/images/logo.svg" alt="" class="logo" />
+        <article id="smooth-content" class="red-quote">
+          <img src="./assets/images/logo.svg" class="logo" />
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
             delectus minima dicta. Facilis possimus, odio id incidunt quia
@@ -119,20 +157,20 @@
           </p>
           <button class="explor-btn"><span>Show More</span></button>
           <img
-            class="red-quote-circle"
+            class="rotating red-quote-circle"
             src="./assets/images/circle1.svg"
             alt=""
           />
         </article>
       </section>
-      <!-- our mession -->
+      <!-- our mession  🛺-->
       <section class="our-mission">
-        <h1 class="lkgt">LKGT</h1>
+        <h1 class="lkgt text1">LKGT</h1>
         <div class="mission">
-          <div>what is our mission ?</div>
-          <h1>MESSION</h1>
+          <h1 class="text2">MESSION</h1>
+          <div class="text3">what is our mission ?</div>
         </div>
-        <img class="image" src="./assets/images/ourMission.png" alt="" />
+        <img class="image pImage" src="./assets/images/ourMission.png" alt="" />
         <article>
           <div class="with-btn">
             <button class="explor-btn"><span>explor</span></button>
@@ -147,16 +185,23 @@
         </article>
       </section>
       <!-- sectors section 🌌 -->
-      <section class="sectors">
+      <section class="sectors" id="sectors">
         <div class="sectors-content">
           <div class="red-block">
+            <div class="red-2"></div>
+            <div class="red-animation"></div>
             <div class="Section-Title">
               <h5 class="dot"></h5>
               <h5>OUR SECTORS</h5>
             </div>
             <div class="text">
-              <h1>Telecommun- ication</h1>
-              <p>
+              <h1
+                id="title"
+                class="sector_title animate__animated animate__faster"
+              >
+                Telecommun- ication
+              </h1>
+              <p id="itsP" class="animate__animated animate__faster">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Aliquam accusantium iusto
               </p>
@@ -165,21 +210,21 @@
           </div>
           <div class="dark-block">
             <h1>TECH</h1>
-            <img src="./assets/images/Mask Group 1.png" alt="" />
+            <img class="pImage" src="./assets/images/Mask Group 1.png" alt="" />
             <div class="btns">
               <button>PREV</button>
               <div class="line"></div>
-              <button>NEXT</button>
+              <button id="next">NEXT</button>
             </div>
           </div>
           <div class="right-red-line"></div>
-          <div class="circle">
+          <div class="circle rotating">
             <img src="./assets/images/circle1.svg" />
           </div>
         </div>
       </section>
     </main>
-    <footer>
+    <footer id="contact">
       <div class="Section-Title">
         <h5 class="dot"></h5>
         <h5>CONTACT US</h5>
@@ -187,28 +232,42 @@
       <div class="content">
         <div class="social">
           <h1>Want to be the first to know?</h1>
-          <h1>Follow us on social:</h1>
+          <h1 class="follow">Follow us on social:</h1>
           <div class="line"></div>
           <div class="links">
-            <a href="http://">facebook</a>
-            <a href="http://">linkdin</a>
-            <a href="http://">facebook</a>
+            <a class="facebook" href="http://">Facebook</a>
+            <a href="http://">Linkdin</a>
+            <a href="http://">Instgram</a>
           </div>
         </div>
         <div class="numbers">
-          <h1>Dubai</h1>
+          <h1>DUBAI</h1>
           <ul>
-            <li>TELE : 45454543</li>
-            <li>FAX: 84512</li>
-            <li>MOB: 452147965</li>
-            <li>PO.BOX: 84534</li>
+            <li><span class="bold">TELE : </span> 45454543</li>
+            <li><span class="bold">FAX:</span> 512</li>
+            <li><span class="bold">MOB:</span> 2147965</li>
+            <li><span class="bold">PO.BOX:</span> 84534</li>
           </ul>
-          <p>Location :Business BAY OPAL TOWER - 11 FLOOR -1108</p>
+          <p class="location">
+            Location :Business BAY OPAL TOWER - 11 FLOOR -1108
+          </p>
         </div>
       </div>
     </footer>
+
+    <!-- cursor  -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <div class="ball"></div>
     <!-- jquery -->
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <!-- //      GSAP       // -->
+    <script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
+
+    <!-- cursor ollower  -->
+    <script src="./assets/js/cursor-follower.js"></script>
     <!-- bootstrap stuf  -->
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js.map"></script>
@@ -216,5 +275,9 @@
     <script src="./assets/js/script.js"></script>
     <!-- aos -->
     <script src="./assets/js/aos.js"></script>
+    <!-- //INITIALIZE AOS// -->
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

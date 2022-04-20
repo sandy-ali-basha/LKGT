@@ -3,18 +3,52 @@
   padding-left: 5vw;
   position: relative;
   $about-width: 55vw;
+  @include media(">phone", "<=tablet") {
+    padding-top: 9vh;
+  }
   .header {
-    font-family: "Araboto" !important;
     font-weight: 900 !important;
     margin-left: 3vw;
     flex-wrap: wrap-reverse;
     width: $about-width;
     font-weight: bold;
-    font-size: 7rem;
+    font-size: 6rem;
     line-height: 6.5rem;
     letter-spacing: 6px;
     font-weight: bold;
     text-transform: uppercase;
+    position: relative;
+    @include media(">phone", "<=tablet") {
+      width: 100vw;
+    }
+    span {
+      font-family: "Araboto" !important;
+      width: 100%;
+      float: left;
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+      transform: translateX(-200px);
+      opacity: 0;
+
+      &:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.5s;
+      }
+    }
+  }
+  .header_animation {
+    animation-name: titleAnimation;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
   }
   .about-circle {
     overflow: auto;
@@ -32,8 +66,14 @@
     margin: 2rem;
     font-size: 1.2rem;
     padding-block: 1rem;
+    @include media(">phone", "<=tablet") {
+      width: 85vw;
+    }
     .explor-btn {
       margin-right: 2rem;
+      @include media(">phone", "<=tablet") {
+        margin-top: 2vh;
+      }
     }
     p {
       font-family: araboto !important;
@@ -57,14 +97,25 @@
     mix-blend-mode: color-dodge;
     z-index: -1;
     width: 50vw;
+    @include media(">phone", "<=tablet") {
+      width: 60vw;
+    }
   }
   .logo1 {
     right: 0px;
     top: -15vh;
+    @include media(">phone", "<=tablet") {
+      right: -120px;
+      top: -5vh;
+    }
   }
   .logo2 {
     top: 75vh;
     left: -35vw;
+    @include media(">phone", "<=tablet") {
+      top: 55vh;
+      left: -29vw;
+    }
   }
   .red-quote {
     position: relative;
@@ -72,13 +123,16 @@
     width: 100vw;
     background-color: $dark-red;
     padding: 5vh 20vw;
-    margin-top: 50vh;
+    margin-top: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 1.5rem;
     text-align: center;
+    @include media(">phone", "<=tablet") {
+      margin-top: 10vh;
+    }
     img {
       filter: brightness(0.8);
       width: 10vw;
@@ -106,5 +160,53 @@
       top: 19vh;
       width: 46vw;
     }
+  }
+}
+
+.container {
+  position: relative;
+}
+
+h1,
+h2 {
+  span {
+    width: 100%;
+    float: left;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    transform: translateX(-150px);
+    opacity: 0;
+    animation-name: titleAnimation;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+  }
+}
+h1 span {
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+
+  &:first-child {
+    animation-delay: 0.7s;
+  }
+  &:last-child {
+    animation-delay: 0.5s;
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  20% {
+    transform: translateY(0);
+    opacity: 1;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
   }
 }

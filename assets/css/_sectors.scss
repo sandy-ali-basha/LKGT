@@ -3,11 +3,16 @@
   height: 100vh;
   .Section-Title {
     margin-left: 5vw;
+    z-index: 5;
+    position: relative;
   }
   .sectors-content {
     display: flex;
     justify-content: center;
     align-items: center;
+    @include media(">phone", "<=tablet") {
+      flex-direction: column;
+    }
     .explor-btn {
       background-color: $greay;
       border: none;
@@ -29,14 +34,29 @@
       padding-top: 5vh;
       width: 50vw;
       height: 100vh;
+      @include media(">phone", "<=tablet") {
+        width: 100vw;
+        height: inherit;
+      }
     }
+
     .red-block {
-      background-color: $dark-red !important;
       .text {
         z-index: 10;
         left: 41%;
         position: relative;
         top: 22%;
+        @include media(">phone", "<=tablet") {
+          margin-left: 5vw;
+        }
+        @include media("<phone") {
+          position: initial;
+        }
+        #itsP {
+          @include media(">phone", "<=tablet") {
+            width: 50vw;
+          }
+        }
         h1 {
           color: #edf4fc;
           font-size: 5rem;
@@ -61,15 +81,18 @@
       flex-direction: column;
       .btns {
         display: flex;
-        justify-content: space-between; /* padding-top: 7vh; */
+        justify-content: space-between;
         position: relative;
         top: 7vh;
         align-items: center;
         width: 22vw;
         background: rebeccapurple;
-        /* padding-top: 5vh; */
+
         margin-right: 10vw;
         height: 0px;
+        @include media(">phone", "<=tablet") {
+          width: 70vw;
+        }
         button {
           width: 5vw;
           height: 5vw;
@@ -81,6 +104,11 @@
           font-size: 0.7rem;
           background: #ff000000;
           border: 1px solid transparent;
+          @include media(">phone", "<=tablet") {
+            width: 13vw;
+            height: 13vw;
+            font-size: 1.2rem;
+          }
           &:hover {
             transition: all 0.6s;
             border: 1px solid $soft-white;
@@ -97,6 +125,13 @@
         width: 45vw;
         position: relative;
         right: 12vw;
+        z-index: 4;
+        top: -58vh;
+        @include media(">phone", "<=tablet") {
+          position: initial;
+          width: 65vw;
+          transform: none !important;
+        }
       }
       h1 {
         z-index: -1;
@@ -118,6 +153,11 @@
       height: 70%;
       width: 0.5vw;
       background-color: $dark-red;
+      @include media(">phone", "<=tablet") {
+        top: 41%;
+        height: 40%;
+        width: 1.5vw;
+      }
     }
     .circle {
       position: absolute;
@@ -127,6 +167,60 @@
       img {
         width: 100%;
       }
+    }
+  }
+  .red-animation {
+    background-color: $dark-red;
+    position: absolute;
+    left: 0px;
+    height: 100vh;
+    width: 50vw;
+    top: 0px;
+    z-index: -1;
+    @include media(">phone", "<=tablet") {
+      height: 70vh;
+      width: 80vw;
+      animation: none;
+    }
+  }
+  .red-2 {
+    z-index: -1;
+    background-color: rgba(255, 117, 117, 0.623) !important;
+    position: absolute;
+    left: 0px;
+    height: 100vh;
+    width: 50vw;
+    top: 0px;
+    z-index: -1;
+    @include media(">phone", "<=tablet") {
+      display: none;
+    }
+  }
+  .red-effect2 {
+    animation: redEffect 1.5s forwards;
+    animation-delay: 200ms;
+  }
+  .red-effect {
+    animation: redEffect2 1.5s forwards;
+  }
+  @keyframes redEffect {
+    0% {
+      opacity: 1;
+      transform: translateY(0vh);
+    }
+    100% {
+      opacity: 30%;
+      transform: translateY(100vh);
+    }
+  }
+  @keyframes redEffect2 {
+    0% {
+      opacity: 30%;
+      transform: translateY(100vh);
+    }
+    100% {
+      opacity: 100%;
+      transform: translateY(0vh);
     }
   }
 }

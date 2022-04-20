@@ -1,40 +1,101 @@
-$("li").click(function () {
-  $("li").removeClass("active");
-  $(this).addClass("active");
+//------------cursor --------------//
+$("button ,.tech, a, .global   ")
+  .on("mouseenter", function () {
+    $(".ball").addClass("focus");
+  })
+  .on("mouseleave", function () {
+    $(".ball").removeClass("focus");
+  });
+
+// -------sectors morph-----------//
+const element = document.getElementById("title");
+const pargraph = document.getElementById("itsP");
+$("#next").click(function () {
+  $(".sector_title").addClass("animate__fadeOut");
+  $("#itsP").addClass("animate__fadeOut");
+  $(".red-animation").addClass("red-effect");
+  $(".red-2").addClass("red-effect2");
+  setTimeout(function () {
+    element.innerHTML = "Banking";
+    pargraph.innerHTML =
+      "sit, amet consectetur adipisicing elit Aliquam accusant ";
+    $(".sector_title").addClass("my__fadeInDown");
+    $("#itsP").addClass("my__fadeInUp");
+    $("#itsP").removeClass("animate__fadeOut");
+    $(".sector_title").removeClass("animate__fadeOut");
+    $(".red-animation").removeClass("red-effect");
+    $(".red-2").removeClass("red-effect2");
+  }, 1500);
 });
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
 
-if (typeof Dropzone != "undefined")
-  new Dropzone(document.querySelector("[data-dropzone]"));
+function isScrolledIntoView(elem) {
+  var docViewTop = $(window).scrollTop();
+  var docViewBottom = docViewTop + $(window).height();
 
-$(".old-file-remove-btn").click(function () {
-  $(".old-file-item").remove();
-});
+  var elemTop = $(elem).offset().top;
+  var elemBottom = elemTop + $(elem).height();
 
-$(".showMoreBtn").click(function () {
-  $(".notification-item").removeClass("d-none");
-  $(this).hide();
-});
+  return elemBottom <= docViewBottom && elemTop >= docViewTop;
+}
 
-$(".ShowGradeBtn").click(function () {
-  $(".pyro").removeClass("d-none");
+$(window).scroll(function () {
+  $(".header span").each(function () {
+    if (isScrolledIntoView(this) === true) {
+      $(this).addClass("header_animation");
+    }
+  });
 });
-$(".ShowGradeBtnNotPass").click(function () {
-  $(".pyroNotPass").removeClass("d-none");
-});
-$(".youNeedToMakeForm").click(function () {
-  $(".Modal").removeClass("d-none");
-});
-$(".ModalOkBtn").click(function () {
-  $(".Modal").addClass("d-none");
-});
+//-------- GSAP --------//
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: "html",
+      scrub: 1,
+    },
+  })
+  .from(".text3", {
+    x: -50,
+  });
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: "html",
+      scrub: 1,
+    },
+  })
+  .from(".text2", {
+    x: 200,
+  });
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: "html",
+      scrub: 1,
+    },
+  })
+  .from(".text1", {
+    x: -200,
+  });
 
-$(".okBtn").click(function () {
-  $(".pyro").addClass("d-none");
-});
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: "html",
+      scrub: 1,
+    },
+  })
+  .from(".rotating", {
+    rotate: -360,
+  });
 
-$(".okBtnNotPass").click(function () {
-  $(".pyroNotPass").addClass("d-none");
+gsap.to(".pImage", {
+  yPercent: 100,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".pSection",
+    scrub: true,
+  },
 });

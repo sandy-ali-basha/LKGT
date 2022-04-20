@@ -8,6 +8,10 @@
   color: $soft-white;
   accent-color: $dark-red;
 }
+::selection {
+  color: $greay;
+  background: #9f4048;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -32,6 +36,9 @@ body {
 header {
   height: 100vh;
   background: url(../images/hero-bg.jpg) center/cover;
+  @include media(">phone", "<=tablet") {
+    height: 90vh;
+  }
   nav {
     text-transform: uppercase;
     font-size: 1.2rem;
@@ -42,6 +49,7 @@ header {
     a {
       text-decoration: none;
       color: $soft-white;
+
       &:hover,
       &:focus {
         color: $soft-white;
@@ -49,38 +57,71 @@ header {
     }
     .contact-btn {
       background-color: $soft-white;
-      padding: 15px;
-      border-bottom-right-radius: 25px;
+      padding: 12px;
+      border-bottom-right-radius: 10px;
       color: $greay;
       display: flex;
       justify-content: center;
       align-items: center;
+      font-size: 0.8rem;
       &:hover {
         color: $greay;
       }
     }
     .main-btns {
       display: inline-flex;
+      margin-right: 4vw;
       a {
+        margin-inline: 1.6rem;
+        padding-top: 10px;
+        margin-top: 10px;
+        div {
+          font-family: TwCen-normal !important;
+          font-size: 0.8rem;
+          &::after {
+            transition: all 0.5s;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            top: 0px;
+            left: 0px;
+            background-color: transparent;
+          }
+          &:hover {
+            &::after {
+              background-color: $soft-white;
+            }
+          }
+        }
+        img {
+          padding-inline: 1.6rem;
+        }
         position: relative;
-        padding-inline: 1.6rem;
       }
       .menu-btn-active {
         &::after {
           content: "";
           position: absolute;
           width: 100%;
-          height: 2px;
+          height: 3px;
           top: 0px;
           left: 0px;
           background-color: $soft-white;
         }
       }
-      .menu {
-        width: 6vw;
-        img {
-          width: 100%;
-        }
+    }
+    .menu {
+      width: 3vw;
+      position: fixed;
+      top: 2vh;
+      right: 2vw;
+      z-index: 5555;
+      @include media(">phone", "<=tablet") {
+        width: 11vw;
+      }
+      img {
+        width: 100%;
       }
     }
   }
@@ -99,25 +140,87 @@ header {
       left: 30vw;
       font-size: 5rem;
       top: 16vh;
+      animation-delay: 1s;
+      transition: all 0.5s;
+      &:hover {
+        color: $dark-red;
+        transform: scale(1.1);
+      }
+
+      @include media(">phone", "<=tablet") {
+        left: 24vw;
+        font-size: 4rem;
+        top: 29vh;
+        z-index: 6;
+      }
     }
     .alkhwam {
       color: $dark-red;
       font-size: 12rem;
+      letter-spacing: 1px;
+      animation: alkhwam 1s;
+      animation-timing-function: cubic-bezier(0.69, 0.11, 0.02, 1.15);
+
+      @include media(">phone", "<=tablet") {
+        font-size: 9rem;
+        z-index: 2;
+      }
+    }
+
+    @keyframes alkhwam {
+      0% {
+        letter-spacing: 1500px;
+      }
+      100% {
+        letter-spacing: 1px;
+      }
     }
     .tech {
       font-size: 3rem;
       position: absolute;
       top: 10rem;
-      left: 46rem;
+      left: 44rem;
+      animation-delay: 0.8s;
+      @include media(">phone", "<=tablet") {
+        top: 32vh;
+        left: 53vw;
+        z-index: 3;
+      }
+      &:hover {
+        transform: scale(1.4) !important;
+      }
     }
     .twinty {
       font-weight: 800;
-      opacity: 20%;
       transform: rotate(90deg);
       left: -10rem;
       top: 13rem;
       position: absolute;
       font-size: 18vw;
+      animation: twinty 0.8s;
+      animation-delay: 1.5s;
+      opacity: 0%;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(1, 0.51, 0.53, 0.99);
+      @include media(">phone", "<=tablet") {
+        left: -39vw !important;
+        top: 20rem;
+        position: absolute;
+        line-height: initial !important;
+        font-size: 39vw !important;
+      }
+    }
+    @keyframes twinty {
+      0% {
+        left: -23rem;
+        opacity: 0%;
+        font-size: 30vw;
+      }
+      100% {
+        opacity: 20%;
+        font-size: 18vw;
+        left: -10rem;
+      }
     }
     .lkgt-circle {
       position: absolute;
@@ -126,17 +229,11 @@ header {
       opacity: 80%;
       img {
         width: 9vw;
+        @include media(">phone", "<=tablet") {
+          width: 20vw;
+        }
       }
       transform: rotate(90deg);
-      animation: rotate 15s infinite linear;
-    }
-    @keyframes rotate {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
     }
     .go-to-profile {
       position: absolute;
@@ -145,6 +242,9 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
+      &:hover {
+        transform: scale(1.1);
+      }
       .img {
         display: flex;
         justify-content: center;
@@ -152,10 +252,14 @@ header {
         width: 15vw;
         height: 15vh;
         background: url(../images/img.png) center/cover;
+        @include media(">phone", "<=tablet") {
+          width: 31vw;
+          height: 13vh;
+        }
         img {
           &:hover {
             transform: scale(1.1);
-            filter: drop-shadow(0px 0px 4px black);
+            filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.438));
           }
         }
       }
@@ -215,5 +319,49 @@ header {
     top: 50%;
     left: 50%;
     z-index: 1;
+  }
+}
+
+.my__fadeInDown {
+  animation: MyFadeInDown 0.3s cubic-bezier(0.45, -0.22, 0.21, 1.02);
+}
+@keyframes MyFadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.my__fadeInUp {
+  animation: my__fadeInUp 0.3s cubic-bezier(0.45, -0.22, 0.21, 1.02);
+}
+@keyframes my__fadeInUp {
+  from {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.rotate {
+  animation: rotate 25s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.pImage {
+  @include media(">phone", "<=tablet") {
+    transform: none !important;
   }
 }

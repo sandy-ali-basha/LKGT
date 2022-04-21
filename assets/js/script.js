@@ -6,6 +6,15 @@ $("button ,.tech, a, .global   ")
   .on("mouseleave", function () {
     $(".ball").removeClass("focus");
   });
+//--------side--------------//
+$(".menu").click(function () {
+  $(".navigation").addClass("animate__fadeInRight show");
+  $(".navigation").removeClass(" animate__fadeOutRight");
+});
+$(".close").click(function () {
+  $(".navigation").removeClass("animate__fadeInRight");
+  $(".navigation").addClass(" animate__fadeOutRight");
+});
 
 // -------sectors morph-----------//
 const element = document.getElementById("title");

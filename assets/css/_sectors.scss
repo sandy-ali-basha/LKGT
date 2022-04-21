@@ -1,16 +1,20 @@
 .sectors {
   position: relative;
   height: 100vh;
+
   .Section-Title {
     margin-left: 5vw;
     z-index: 5;
     position: relative;
+    @include media("<=phone") {
+      margin-left: 0vw;
+    }
   }
   .sectors-content {
     display: flex;
-    justify-content: center;
     align-items: center;
-    @include media(">phone", "<=tablet") {
+    justify-content: center;
+    @include media("<=tablet") {
       flex-direction: column;
     }
     .explor-btn {
@@ -34,9 +38,12 @@
       padding-top: 5vh;
       width: 50vw;
       height: 100vh;
-      @include media(">phone", "<=tablet") {
+      @include media("<=tablet") {
         width: 100vw;
         height: inherit;
+      }
+      @include media("<=phone") {
+        width: 100vw;
       }
     }
 
@@ -46,20 +53,29 @@
         left: 41%;
         position: relative;
         top: 22%;
-        @include media(">phone", "<=tablet") {
+        @include media("<=tablet") {
           margin-left: 5vw;
-        }
-        @include media("<phone") {
           position: initial;
         }
+
         #itsP {
-          @include media(">phone", "<=tablet") {
+          @include media("<=tablet") {
             width: 50vw;
+          }
+          @include media("<=tablet") {
+            width: 65vw;
+            word-spacing: 5px;
+            overflow-wrap: break-word;
           }
         }
         h1 {
           color: #edf4fc;
           font-size: 5rem;
+          @include media("<=phone") {
+            font-size: 3rem;
+            word-break: break-word;
+            width: 80vw;
+          }
         }
         p {
           color: #edf4fc;
@@ -71,6 +87,9 @@
           position: relative;
           left: -5%;
           margin-top: 0.5rem;
+          @include media("<=phone") {
+            left: 0%;
+          }
         }
       }
     }
@@ -87,12 +106,15 @@
         align-items: center;
         width: 22vw;
         background: rebeccapurple;
-
         margin-right: 10vw;
         height: 0px;
-        @include media(">phone", "<=tablet") {
+        @include media("<=tablet") {
           width: 70vw;
         }
+        @include media("<=phone") {
+          width: 80vw;
+        }
+
         button {
           width: 5vw;
           height: 5vw;
@@ -104,10 +126,15 @@
           font-size: 0.7rem;
           background: #ff000000;
           border: 1px solid transparent;
-          @include media(">phone", "<=tablet") {
+          @include media("<=tablet") {
             width: 13vw;
             height: 13vw;
             font-size: 1.2rem;
+          }
+          @include media("<=phone") {
+            font-size: initial;
+            width: 20vw;
+            height: 20vw;
           }
           &:hover {
             transition: all 0.6s;
@@ -127,10 +154,13 @@
         right: 12vw;
         z-index: 4;
         top: -58vh;
-        @include media(">phone", "<=tablet") {
-          position: initial;
+        @include media("<=tablet") {
           width: 65vw;
+          position: initial;
           transform: none !important;
+        }
+        @include media("<=phone") {
+          width: 80vw;
         }
       }
       h1 {
@@ -143,6 +173,12 @@
         opacity: 20%;
         top: 29vh;
         color: $soft-white;
+        @include media("<=tablet") {
+          left: 0px;
+        }
+        @include media("<=phone") {
+          display: none;
+        }
       }
       // display: flex;
     }
@@ -153,10 +189,13 @@
       height: 70%;
       width: 0.5vw;
       background-color: $dark-red;
-      @include media(">phone", "<=tablet") {
+      @include media("<=tablet") {
         top: 41%;
         height: 40%;
         width: 1.5vw;
+      }
+      @include media("<=phone") {
+        width: 2vw;
       }
     }
     .circle {
@@ -177,9 +216,9 @@
     width: 50vw;
     top: 0px;
     z-index: -1;
-    @include media(">phone", "<=tablet") {
+    @include media("<=tablet") {
       height: 70vh;
-      width: 80vw;
+      width: 70vw;
       animation: none;
     }
   }
@@ -192,7 +231,7 @@
     width: 50vw;
     top: 0px;
     z-index: -1;
-    @include media(">phone", "<=tablet") {
+    @include media("<=tablet") {
       display: none;
     }
   }

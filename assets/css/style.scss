@@ -16,7 +16,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   background-color: $greay !important ;
 }
 .Section-Title {
@@ -55,6 +55,7 @@ header {
         color: $soft-white;
       }
     }
+
     .contact-btn {
       background-color: $soft-white;
       padding: 12px;
@@ -67,8 +68,14 @@ header {
       &:hover {
         color: $greay;
       }
+      @include media("<phone") {
+        display: none;
+      }
     }
     .main-btns {
+      @include media("<phone") {
+        display: none;
+      }
       display: inline-flex;
       margin-right: 4vw;
       a {
@@ -115,14 +122,23 @@ header {
       width: 3vw;
       position: fixed;
       top: 2vh;
-      right: 2vw;
+      right: 8vw;
       z-index: 5555;
-      @include media(">phone", "<=tablet") {
+      @include media("<=tablet") {
         width: 11vw;
       }
       img {
         width: 100%;
       }
+    }
+  }
+  .OnMobileLogo {
+    position: absolute;
+    top: 3vh;
+    left: 2vh;
+    width: 30vw;
+    @include media(">=tablet") {
+      display: none;
     }
   }
   .hero {
@@ -132,6 +148,9 @@ header {
     align-items: center;
     position: relative;
     height: 80vh;
+    @include media("<=phone") {
+      margin-top: 10vh;
+    }
     .global {
       position: absolute;
       -webkit-text-stroke-width: 1px;
@@ -146,12 +165,17 @@ header {
         color: $dark-red;
         transform: scale(1.1);
       }
-
       @include media(">phone", "<=tablet") {
         left: 24vw;
         font-size: 4rem;
         top: 29vh;
         z-index: 6;
+      }
+      @include media("<phone") {
+        font-size: 3rem;
+        left: 8vw;
+        font-size: 3rem;
+        top: 25vh;
       }
     }
     .alkhwam {
@@ -164,6 +188,11 @@ header {
       @include media(">phone", "<=tablet") {
         font-size: 9rem;
         z-index: 2;
+      }
+      @include media("<phone") {
+        font-size: 5rem;
+        position: relative;
+        top: -7vh;
       }
     }
 
@@ -186,6 +215,14 @@ header {
         left: 53vw;
         z-index: 3;
       }
+      @include media("<phone") {
+        font-size: 3rem;
+        left: 65vw;
+        animation: none !important;
+        bottom: 39vh;
+        top: auto;
+      }
+
       &:hover {
         transform: scale(1.4) !important;
       }
@@ -208,6 +245,16 @@ header {
         position: absolute;
         line-height: initial !important;
         font-size: 39vw !important;
+      }
+      @include media("<phone") {
+        font-weight: 800;
+        transform: none;
+        left: 2rem;
+        top: 28rem;
+        position: absolute;
+        font-size: 35vw;
+        opacity: 30%;
+        animation: none;
       }
     }
     @keyframes twinty {
@@ -232,6 +279,10 @@ header {
         @include media(">phone", "<=tablet") {
           width: 20vw;
         }
+        @include media("<phone") {
+          width: 30vw;
+          opacity: 25%;
+        }
       }
       transform: rotate(90deg);
     }
@@ -242,6 +293,9 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
+      @include media("<phone") {
+        bottom: 2rem;
+      }
       &:hover {
         transform: scale(1.1);
       }
@@ -254,6 +308,10 @@ header {
         background: url(../images/img.png) center/cover;
         @include media(">phone", "<=tablet") {
           width: 31vw;
+          height: 13vh;
+        }
+        @include media("<phone") {
+          width: 40vw;
           height: 13vh;
         }
         img {

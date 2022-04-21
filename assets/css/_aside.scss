@@ -1,0 +1,139 @@
+aside {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 40vw;
+  height: 100vh;
+  z-index: 5555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  display: none;
+  @include media("<phone") {
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    right: initial;
+  }
+  .left {
+    height: 100%;
+    width: 20vw;
+    background-color: #5e656d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    @include media("<phone") {
+      width: 30vw;
+    }
+    div {
+      img {
+        width: 6vw;
+        margin-top: 3rem;
+        @include media("<phone") {
+          width: 15vw;
+        }
+      }
+      .lkgt {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        text-transform: uppercase;
+        font-size: 3rem;
+        margin: 10px auto;
+      }
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      width: 3vw;
+      margin: 2rem;
+      @include media("<phone") {
+        width: 10vw;
+        margin-bottom: 16vh;
+      }
+      &:hover {
+        transform: rotate(45deg);
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .right {
+    width: 35vw;
+    background-color: $greay;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include media("<phone") {
+      width: 70vw;
+    }
+    .borderd {
+      border-left: 5px solid $dark-red;
+      width: 80%;
+      margin-top: 5vh;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      ol {
+        list-style-type: none;
+        li {
+          margin-block: 1rem;
+          font-size: 1.2rem;
+          a {
+            color: $soft-white;
+            text-decoration: none;
+            font-family: TwCen-normal !important;
+            font-weight: 200;
+            &:hover {
+              color: $dark-red;
+            }
+          }
+          &::before {
+            content: "--";
+          }
+        }
+      }
+      .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        button {
+          background-color: transparent;
+          border: none;
+          width: 3vw;
+          height: 3vw;
+          margin: 10px;
+          @include media("<=phone") {
+            width: 10vw;
+            height: 10vw;
+          }
+        }
+        .facebook {
+          background: url("../images/ico_facebook.svg") no-repeat;
+          background-position: center;
+        }
+        .Instgram {
+          background: url("../images/ico_instagram.svg") no-repeat;
+          background-position: center;
+        }
+      }
+    }
+  }
+}
+.show {
+  display: flex;
+  @include media("<phone") {
+    body {
+      overflow: hidden !important;
+    }
+  }
+}

@@ -3,7 +3,7 @@
   padding: 18vh;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: relative !important;
   flex-direction: column;
   @include media("<=phone") {
     padding-top: 10vh;
@@ -59,7 +59,7 @@
   }
   .image {
     width: 50vw;
-    top: -40vh;
+    top: -41vh;
     position: relative;
     @include media(">phone", "<=tablet") {
       width: 60vw;

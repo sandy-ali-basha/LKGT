@@ -1,12 +1,14 @@
-footer {
-  position: relative;
-  height: 90vh;
+.footer {
   background-color: #666666;
   background-image: url("../images/Transaction.jpg");
   background-position: left top;
   background-size: cover;
   background-repeat: no-repeat;
+}
+footer {
   display: flex;
+  position: relative;
+  height: 90vh;
   flex-direction: column;
   @include media("<=tablet") {
     background-position: center;
@@ -19,23 +21,59 @@ footer {
     color: $dark-red !important;
   }
   .Section-Title {
-    margin-top: 35vh;
+    margin-top: 5vh;
     margin-left: 7vw;
+    margin-bottom: 3vh;
     @include media("<=tablet") {
       margin-top: 5vh;
     }
     h5 {
-      color: $greay !important;
+      color: $gray !important;
     }
     .dot {
-      background-color: $greay !important;
+      background-color: $gray !important;
+    }
+  }
+  .contact-content {
+    display: flex;
+  }
+  .form {
+    padding: 1rem;
+    width: 70vw;
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      padding-left: 10vw;
+      h2 {
+        width: 60%;
+        margin-bottom: 2vh;
+      }
+    }
+
+    ::placeholder {
+      /* Internet Explorer 10-11 */
+      color: $gray;
+    }
+
+    input,
+    textarea {
+      border: none;
+      outline: none;
+      padding: 0.7rem;
+      width: 45%;
+      font-family: TwCen-normal !important;
+      background-color: #cde8f5;
+      color: $gray !important;
+      margin-top: 2rem;
     }
   }
   .content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top: 4vh;
+    flex-direction: column;
     @include media("<=tablet") {
       flex-direction: column;
     }
@@ -46,7 +84,7 @@ footer {
           font-size: 1.6rem;
         }
       }
-      margin-left: 5vw;
+
       .links {
         margin-top: 3vh;
         a {
@@ -93,7 +131,7 @@ footer {
         margin-top: 20px;
       }
       h1 {
-        color: $greay !important;
+        color: $gray !important;
       }
     }
   }

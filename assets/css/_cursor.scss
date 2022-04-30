@@ -18,3 +18,22 @@
   width: 100px;
   height: 100px;
 }
+.showImg {
+  display: initial !important;
+}
+
+.cursor-follower {
+  height: 50vh;
+  width: 40vh;
+  position: relative;
+  left: 2vw;
+  top: -13vh;
+  object-fit: cover;
+  z-index: 2;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: none;
+  }
+}

@@ -1,10 +1,32 @@
 //------------cursor --------------//
-$("button ,.tech, a, .global   ")
+$("button ,.tech, a, .global ,input  ")
   .on("mouseenter", function () {
     $(".ball").addClass("focus");
   })
   .on("mouseleave", function () {
     $(".ball").removeClass("focus");
+  });
+
+// $(".li")
+//   .on("mouseenter", function () {
+//     $(".cursor-follower").addClass("showImg");
+//   })
+//   .on("mouseleave", function () {
+//     $(".cursor-follower").removeClass("showImg");
+//   });
+$(".TelecomLi")
+  .on("mouseenter", function () {
+    $(".telcomImg").addClass("showImg");
+  })
+  .on("mouseleave", function () {
+    $(".telcomImg").removeClass("showImg");
+  });
+$(".printingli")
+  .on("mouseenter", function () {
+    $(".printingImg").addClass("showImg");
+  })
+  .on("mouseleave", function () {
+    $(".printingImg").removeClass("showImg");
   });
 //--------side--------------//
 $(".menu").click(function () {
@@ -19,7 +41,7 @@ $(".close").click(function () {
 // -------sectors morph-----------//
 const element = document.getElementById("title");
 const pargraph = document.getElementById("itsP");
-$("#next").click(function () {
+$(".sectors_btn").click(function () {
   $(".sector_title").addClass("animate__fadeOut");
   $("#itsP").addClass("animate__fadeOut");
   $(".red-animation").addClass("red-effect");
@@ -106,5 +128,50 @@ gsap.to(".pImage", {
   scrollTrigger: {
     trigger: ".pSection",
     scrub: true,
+  },
+});
+
+//-----------GSAP Horizontal Scroll -ScrollTrigger ----------/////
+let scroll_tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".factsContainer",
+      start: "top bottom",
+      scrub: true,
+      end: "bottom top",
+      // markers: true,
+    },
+  }),
+  facts = [...document.querySelectorAll(".fact")];
+scroll_tl.to(facts, {
+  xPercent: -50 * (facts.length - 1),
+  scrollTrigger: {
+    trigger: ".factsContainer_sm",
+    start: "top bottom",
+    scrub: 1,
+    snap: 1 / (facts.length - 1),
+    end: "bottom top",
+    // markers: true,
+  },
+});
+//second one
+let scroll_tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".factsContainer2",
+      start: "top bottom",
+      scrub: true,
+      end: "bottom  top",
+      // markers: true,
+    },
+  }),
+  facts2 = [...document.querySelectorAll(".fact2")];
+scroll_tl2.to(facts2, {
+  xPercent: 20 * (facts2.length - 1),
+  scrollTrigger: {
+    trigger: ".factsContainer_sm2",
+    start: "top bottom",
+    scrub: 1,
+    // markers: true,
+    snap: 1 / (facts2.length - 1),
+    end: "bottom top",
   },
 });

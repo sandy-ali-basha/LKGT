@@ -1,0 +1,32 @@
+.factsContainer_sm,
+.factsContainer_sm2 {
+  display: flex;
+}
+.factsContainer_sm2 {
+  transform: translate(-50vw, 0px);
+}
+.clients {
+  padding-top: 10vh;
+  padding-block: 15vh;
+  background: $gray;
+  position: relative;
+  .Section-Title {
+    margin-left: 5vw;
+  }
+}
+.factsContainer {
+  padding-top: 5vh;
+}
+.fact,
+.fact2 {
+  height: 20vh;
+  padding: 0.5em;
+  img {
+    width: 13vw;
+    height: 13vh;
+  }
+}
+.socialContainer {
+  width: 100vw;
+  height: 50vh;
+}

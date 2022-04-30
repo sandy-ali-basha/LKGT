@@ -1348,10 +1348,24 @@ footer .content .numbers h1 {
 
 .sectorsPage {
   position: relative;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-top: 5vh;
+}
+
+.sectorsPage .circle {
+  position: absolute;
+  right: -310px;
+  bottom: -41vh;
+  width: 40vw;
+  z-index: -1;
+  opacity: 60%;
+}
+
+.sectorsPage .circle img {
+  width: 100%;
 }
 
 .sectorsPage .logo {

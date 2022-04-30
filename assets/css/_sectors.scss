@@ -276,6 +276,18 @@
 }
 .sectorsPage {
   position: relative;
+  overflow: hidden;
+  .circle {
+    position: absolute;
+    right: -310px;
+    bottom: -41vh;
+    width: 40vw;
+    z-index: -1;
+    opacity: 60%;
+    img {
+      width: 100%;
+    }
+  }
   .logo {
     position: absolute;
     z-index: -1;

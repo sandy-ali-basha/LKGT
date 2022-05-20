@@ -38,6 +38,33 @@ $(".close").click(function () {
   $(".navigation").addClass(" animate__fadeOutRight");
 });
 
+//--sectors----
+
+$(window).on("resize", function (e) {
+  checkScreenSize();
+});
+
+checkScreenSize();
+
+function checkScreenSize() {
+  var newWindowWidth = $(window).width();
+  if (newWindowWidth < 481) {
+    $(".li").click(function () {
+      $(".listt").removeClass("animate__animated animate__fadeInRight");
+      $(".title").removeClass("animate__animated animate__fadeOutLeft");
+      $(".listt").addClass("animate__animated animate__fadeOutRight");
+      $(".title").addClass("animate__animated animate__fadeInLeft");
+      window.scrollTo(0, 0);
+    });
+    $(".back").click(function () {
+      $(".listt").removeClass("animate__animated animate__fadeOutRight");
+      $(".title").removeClass("animate__animated animate__fadeInLeft");
+      $(".listt").addClass("animate__animated animate__fadeInRight");
+      $(".title").addClass("animate__animated animate__fadeOutLeft");
+    });
+  }
+}
+
 // -------sectors morph-----------//
 const element = document.getElementById("title");
 const pargraph = document.getElementById("itsP");
@@ -173,5 +200,84 @@ scroll_tl2.to(facts2, {
     // markers: true,
     snap: 1 / (facts2.length - 1),
     end: "bottom top",
+  },
+});
+
+// ----------swiper------
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  slidesPerGroup: 4,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  mousewheel: {
+    invert: true,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  },
+});
+var swiper = new Swiper(".factsContainer2", {
+  slidesPerView: 8,
+  spaceBetween: 5,
+  slidesPerGroup: 4,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  mousewheel: {
+    invert: true,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 8,
+      spaceBetween: 20,
+    },
+  },
+});
+var swiper = new Swiper(".clientsSwiper", {
+  slidesPerView: 8,
+  spaceBetween: 5,
+  slidesPerGroup: 4,
+  loop: true,
+  loopFillGroupWithBlank: true,
+
+  mousewheel: {
+    invert: true,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 8,
+      spaceBetween: 20,
+    },
   },
 });

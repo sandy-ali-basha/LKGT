@@ -1355,6 +1355,14 @@ footer .content .numbers h1 {
   padding-top: 5vh;
 }
 
+@media (max-width: 450px) {
+  .sectorsPage {
+    width: 100vw;
+    overflow: initial;
+    display: initial;
+  }
+}
+
 .sectorsPage .circle {
   position: absolute;
   right: -310px;
@@ -1384,6 +1392,18 @@ footer .content .numbers h1 {
   padding-top: 5vh;
 }
 
+@media (max-width: 450px) {
+  .sectorsPage .title {
+    padding-left: 10vw;
+    width: 100vw;
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    left: 0px;
+    z-index: -1;
+  }
+}
+
 .sectorsPage .title h1 {
   z-index: -1;
   top: 5px;
@@ -1395,9 +1415,27 @@ footer .content .numbers h1 {
   font-size: 5rem;
 }
 
+@media (min-width: 451px) and (max-width: 820px) {
+  .sectorsPage .title h1 {
+    font-display: 4rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .sectorsPage .title h1 {
+    margin: auto;
+  }
+}
+
 .sectorsPage .title p {
   font-family: "TwCen-normal" !important;
   padding-block: 1rem;
+}
+
+@media (max-width: 450px) {
+  .sectorsPage .title p {
+    padding-inline: 1rem;
+  }
 }
 
 .sectorsPage .listt {
@@ -1419,6 +1457,17 @@ footer .content .numbers h1 {
 
 .sectorsPage .listt::-webkit-scrollbar-thumb, .sectorsPage .listt::-webkit-scrollbar {
   background: transparent;
+}
+
+@media (max-width: 450px) {
+  .sectorsPage .listt {
+    width: 100vw;
+    overflow: initial;
+    height: initial;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
 }
 
 .sectorsPage .listt dt {
@@ -1445,6 +1494,22 @@ footer .content .numbers h1 {
   line-height: 5rem;
   border-bottom: 1px solid gray;
   position: relative;
+}
+
+@media (min-width: 451px) and (max-width: 820px) {
+  .sectorsPage .listt li {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .sectorsPage .listt li {
+    padding-left: 5vw;
+    line-height: inherit;
+    font-size: 2rem;
+    width: 100%;
+  }
 }
 
 .sectorsPage .listt li::before {
@@ -1495,6 +1560,27 @@ footer .content .numbers h1 {
 .sectorsPage .icons img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+@media (max-width: 450px) {
+  .sectorsPage .icons img {
+    width: 15vw;
+  }
+}
+
+.sectorsPage .back {
+  color: #c5d5dd;
+  font-weight: bold;
+  background: transparent;
+  border: 2px solid #c5d5dd;
+  padding: 5px 10px;
+  outline: none;
+}
+
+@media (min-width: 450px) {
+  .sectorsPage .back {
+    display: none;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -1736,6 +1822,9 @@ aside .right div .social .Instgram {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .factsContainer_sm2 {
@@ -1746,12 +1835,20 @@ aside .right div .social .Instgram {
 .clients {
   padding-top: 10vh;
   padding-block: 15vh;
-  background: #2a363c;
+  background: #9baab0;
   position: relative;
 }
 
 .clients .Section-Title {
   margin-left: 5vw;
+}
+
+.clients .Section-Title .dot {
+  background: #2a363c;
+}
+
+.clients .Section-Title h5 {
+  color: #2a363c !important;
 }
 
 .factsContainer {
@@ -1766,8 +1863,8 @@ aside .right div .social .Instgram {
 
 .fact img,
 .fact2 img {
-  width: 13vw;
-  height: 13vh;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
 }
 
 .socialContainer {
@@ -1954,6 +2051,12 @@ header nav .menu {
 @media (max-width: 820px) {
   header nav .menu {
     width: 11vw;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 820px) {
+  header nav .menu {
+    width: 5vw;
   }
 }
 
@@ -2516,5 +2619,41 @@ header .hero .go-to-profile .text {
   font-size: 13px;
   color: #aaa;
   margin-bottom: 0;
+}
+
+.mySwiper {
+  width: 100%;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  height: 60vh;
+}
+
+@media (max-width: 820px) {
+  .mySwiper {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */

@@ -277,6 +277,12 @@
 .sectorsPage {
   position: relative;
   overflow: hidden;
+  @include media("<=phone") {
+    width: 100vw;
+    overflow: initial;
+    display: initial;
+  }
+
   .circle {
     position: absolute;
     right: -310px;
@@ -303,20 +309,38 @@
     width: 45vw;
     padding-right: 5vw;
     padding-top: 5vh;
+
+    @include media("<=phone") {
+      padding-left: 10vw;
+      width: 100vw;
+      position: absolute;
+      top: 0px;
+      opacity: 0;
+      left: 0px;
+      z-index: -1;
+    }
     h1 {
       z-index: -1;
       top: 5px;
       color: #d22e3c;
-
       margin-top: 0vh;
       position: relative;
       letter-spacing: 5px;
       margin-left: -5vw;
       font-size: 5rem;
+      @include media(">phone", "<=tablet") {
+        font-display: 4rem;
+      }
+      @include media("<=phone") {
+        margin: auto;
+      }
     }
     p {
       font-family: "TwCen-normal" !important;
       padding-block: 1rem;
+      @include media("<=phone") {
+        padding-inline: 1rem;
+      }
     }
   }
   .listt {
@@ -330,6 +354,14 @@
     &::-webkit-scrollbar-thumb,
     &::-webkit-scrollbar {
       background: transparent;
+    }
+    @include media("<=phone") {
+      width: 100vw;
+      overflow: initial;
+      height: initial;
+      position: absolute;
+      top: 0px;
+      left: 0px;
     }
     dt {
       font-weight: 200;
@@ -354,6 +386,16 @@
       line-height: 5rem;
       border-bottom: 1px solid gray;
       position: relative;
+      @include media(">phone", "<=tablet") {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+      @include media("<=phone") {
+        padding-left: 5vw;
+        line-height: inherit;
+        font-size: 2rem;
+        width: 100%;
+      }
       &::before {
         background: rgb(255, 255, 255);
         content: "";
@@ -387,6 +429,20 @@
       &:hover {
         transform: scale(1.2);
       }
+      @include media("<=phone") {
+        width: 15vw;
+      }
+    }
+  }
+  .back {
+    color: $soft-white;
+    font-weight: bold;
+    background: transparent;
+    border: 2px solid $soft-white;
+    padding: 5px 10px;
+    outline: none;
+    @include media(">=phone") {
+      display: none;
     }
   }
 }

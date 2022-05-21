@@ -44,11 +44,10 @@ $(window).on("resize", function (e) {
   checkScreenSize();
 });
 
-checkScreenSize();
-
 function checkScreenSize() {
   var newWindowWidth = $(window).width();
   if (newWindowWidth < 481) {
+    console.log("its mobile");
     $(".li").click(function () {
       $(".listt").removeClass("animate__animated animate__fadeInRight");
       $(".title").removeClass("animate__animated animate__fadeOutLeft");
@@ -62,8 +61,11 @@ function checkScreenSize() {
       $(".listt").addClass("animate__animated animate__fadeInRight");
       $(".title").addClass("animate__animated animate__fadeOutLeft");
     });
+  } else {
+    console.log("not mobile");
   }
 }
+checkScreenSize();
 
 // -------sectors morph-----------//
 const element = document.getElementById("title");
@@ -200,84 +202,5 @@ scroll_tl2.to(facts2, {
     // markers: true,
     snap: 1 / (facts2.length - 1),
     end: "bottom top",
-  },
-});
-
-// ----------swiper------
-
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 4,
-  spaceBetween: 20,
-  slidesPerGroup: 4,
-  loop: true,
-  loopFillGroupWithBlank: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  mousewheel: {
-    invert: true,
-  },
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    // when window width is >= 640px
-    640: {
-      slidesPerView: 4,
-      spaceBetween: 20,
-    },
-  },
-});
-var swiper = new Swiper(".factsContainer2", {
-  slidesPerView: 8,
-  spaceBetween: 5,
-  slidesPerGroup: 4,
-  loop: true,
-  loopFillGroupWithBlank: true,
-  mousewheel: {
-    invert: true,
-  },
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 4,
-      spaceBetween: 20,
-    },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 8,
-      spaceBetween: 20,
-    },
-  },
-});
-var swiper = new Swiper(".clientsSwiper", {
-  slidesPerView: 8,
-  spaceBetween: 5,
-  slidesPerGroup: 4,
-  loop: true,
-  loopFillGroupWithBlank: true,
-
-  mousewheel: {
-    invert: true,
-  },
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 4,
-      spaceBetween: 20,
-    },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 8,
-      spaceBetween: 20,
-    },
   },
 });

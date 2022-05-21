@@ -1,4 +1,5 @@
 .sectors {
+  overflow-x: hidden;
   position: relative;
   height: 100vh;
   a {
@@ -211,6 +212,7 @@
       width: 40vw;
       left: -20rem;
       bottom: -37%;
+
       img {
         width: 100%;
       }
@@ -290,6 +292,10 @@
     width: 40vw;
     z-index: -1;
     opacity: 60%;
+    @include media("<=phone") {
+      opacity: 30%;
+      width: 160vw;
+    }
     img {
       width: 100%;
     }
@@ -389,8 +395,10 @@
       @include media(">phone", "<=tablet") {
         font-size: 2rem;
         line-height: 3rem;
+        color: $soft-white;
       }
       @include media("<=phone") {
+        color: $soft-white;
         padding-left: 5vw;
         line-height: inherit;
         font-size: 2rem;

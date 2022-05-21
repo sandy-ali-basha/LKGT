@@ -548,6 +548,7 @@ footer {
 @media (max-width: 820px) {
   footer {
     background-position: center;
+    height: 100vh;
   }
 }
 
@@ -556,7 +557,8 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 90vh;
+    height: inherit;
+    padding-bottom: 5vh;
   }
 }
 
@@ -590,9 +592,31 @@ footer .contact-content {
   display: flex;
 }
 
+@media (max-width: 450px) {
+  footer .contact-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 footer .form {
   padding: 1rem;
   width: 70vw;
+}
+
+@media (min-width: 451px) and (max-width: 820px) {
+  footer .form {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 450px) {
+  footer .form {
+    width: 100vw;
+    padding: 0vh 5vw;
+  }
 }
 
 footer .form form {
@@ -612,9 +636,27 @@ footer .form form {
   padding-left: 10vw;
 }
 
+@media (min-width: 451px) and (max-width: 820px) {
+  footer .form form {
+    padding: 1vw;
+  }
+}
+
+@media (max-width: 450px) {
+  footer .form form {
+    padding: 0px;
+  }
+}
+
 footer .form form h2 {
   width: 60%;
   margin-bottom: 2vh;
+}
+
+@media (max-width: 820px) {
+  footer .form form h2 {
+    width: 100%;
+  }
 }
 
 footer .form ::-webkit-input-placeholder {
@@ -649,6 +691,13 @@ footer .form textarea {
   margin-top: 1rem;
 }
 
+@media (max-width: 820px) {
+  footer .form input,
+  footer .form textarea {
+    width: 95%;
+  }
+}
+
 footer .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -671,6 +720,28 @@ footer .content {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 50vw;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media (max-width: 450px) {
+  footer .content {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 820px) {
+  footer .content .social {
+    margin-top: 5vh;
+  }
+}
+
+@media (max-width: 450px) {
+  footer .content .social {
+    padding: 0px 5vw;
   }
 }
 
@@ -713,9 +784,16 @@ footer .content .numbers {
 
 @media (max-width: 820px) {
   footer .content .numbers {
-    width: 50vw;
-    margin-top: 3vh;
-    margin-left: 5vw;
+    width: 95%;
+    margin-top: 2vh;
+    margin-left: 0vw;
+  }
+}
+
+@media (max-width: 820px) {
+  footer .content .numbers {
+    padding: 0px 5vw;
+    margin-top: 5vh;
   }
 }
 
@@ -926,6 +1004,7 @@ footer .content .numbers h1 {
 }
 
 .sectors {
+  overflow-x: hidden;
   position: relative;
   height: 100vh;
 }
@@ -1372,6 +1451,13 @@ footer .content .numbers h1 {
   opacity: 60%;
 }
 
+@media (max-width: 450px) {
+  .sectorsPage .circle {
+    opacity: 30%;
+    width: 160vw;
+  }
+}
+
 .sectorsPage .circle img {
   width: 100%;
 }
@@ -1500,11 +1586,13 @@ footer .content .numbers h1 {
   .sectorsPage .listt li {
     font-size: 2rem;
     line-height: 3rem;
+    color: #c5d5dd;
   }
 }
 
 @media (max-width: 450px) {
   .sectorsPage .listt li {
+    color: #c5d5dd;
     padding-left: 5vw;
     line-height: inherit;
     font-size: 2rem;
@@ -2042,7 +2130,7 @@ header nav .main-btns .menu-btn-active::after {
 
 header nav .menu {
   width: 3vw;
-  position: fixed;
+  position: absolute;
   top: 2vh;
   right: 3vw;
   z-index: 5555;

@@ -478,6 +478,83 @@
 
     <script>
       AOS.init();
+
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        slidesPerGroup: 4,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        mousewheel: {
+          invert: true,
+        },
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        },
+      });
+      var swiper = new Swiper(".factsContainer2", {
+        slidesPerView: 8,
+        spaceBetween: 5,
+        slidesPerGroup: 4,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        mousewheel: {
+          invert: true,
+        },
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 8,
+            spaceBetween: 20,
+          },
+        },
+      });
+      var swiper = new Swiper(".clientsSwiper", {
+        slidesPerView: 8,
+        spaceBetween: 5,
+        slidesPerGroup: 4,
+        loop: true,
+        loopFillGroupWithBlank: true,
+
+        mousewheel: {
+          invert: true,
+        },
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 8,
+            spaceBetween: 20,
+          },
+        },
+      });
     </script>
   </body>
 </html>
